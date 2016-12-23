@@ -1,26 +1,24 @@
 package com.ghostviz;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Main {
+public class TempConversion {
 
     public static void main(String[] args) {
-        fahrenheitToCelsius();
     }
 
-    static void fahrenheitToCelsius() {
-        double celsius = 0;
-        double fahrenheit = 0;
+    public static double fahrenheitToCelsius(double fahrenheit) {
+        double celsius = Math.round((((fahrenheit - 32) * 5)/9)*100d)/100d;
+        return celsius;
+    }
 
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter Temperature in Fahrenheit:");
-            fahrenheit = Double.parseDouble(br.readLine());
-            celsius = ((fahrenheit - 32) * 5)/9;
-        } catch (IOException e) {
-        }
-        System.out.println((double)Math.round(celsius * 100d) / 100d + "°C is " + fahrenheit + "°F");
+    public static double fahrenheitToKelvin(double fahrenheit) {
+        double kelvin = Math.round((((fahrenheit + 459.67) * 5)/9)*100d)/100d;
+        return kelvin;
+    }
+
+
+    public static double fahrenheitToRankine(double fahrenheit) {
+        double rankine = Math.round(((fahrenheit + 459.67))*100d)/100d;
+        return rankine;
     }
 }
