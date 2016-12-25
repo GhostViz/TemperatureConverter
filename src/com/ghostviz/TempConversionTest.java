@@ -52,4 +52,19 @@ public class TempConversionTest {
     public void tenKIs18R() {
         assertEquals(18, TempConversion.kelvinToRankine(10), 0.001);
     }
+
+    @Test
+    public void tenRIsNegativeFourFortyNinePointSixSevenF() {
+        assertEquals(-449.67, TempConversion.rankineToFahrenheit(10), 0.001);
+    }
+
+    @Test
+    public void tenRIsNegativeTwoSixtySevenPointFiveNineC() {
+        assertEquals(-267.59, TempConversion.rankineToCelsius(10), 0.001);
+    }
+
+    @Test
+    public void tenRIsFivePointFiveSixK() {
+        assertEquals(5.56, TempConversion.rankineToKelvin(10), 0.001);
+    }
 }
