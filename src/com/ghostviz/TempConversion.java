@@ -21,4 +21,19 @@ public class TempConversion {
         double rankine = Math.round(((fahrenheit + 459.67))*100d)/100d;
         return rankine;
     }
+
+    public static double celsiusToFahrenheit(double celsius) {
+        double fahrenheit = Math.round(((celsius * 9/5) + 32)*100d)/100d;
+        return fahrenheit;
+    }
+
+    public static double celsiusToKelvin(double celsius) {
+        double kelvin = Math.round((celsius + 273.15)*100d)/100d;
+        return kelvin;
+    }
+
+    public static double celsiusToRankine(double celsius) {
+        double rankine = Math.round(((celsius + 273.15) * 9/5)*100d)/100d;
+        return rankine;
+    }
 }
