@@ -4,6 +4,7 @@ package com.ghostviz;
 public class TempConversion {
 
     public static void main(String[] args) {
+
     }
 
     public static double fahrenheitToCelsius(double fahrenheit) {
